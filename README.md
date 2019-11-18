@@ -1,10 +1,10 @@
-######**ECE 585 Final Project Folder**
+###### **ECE 585 Final Project Folder**
 
-###Primary Function Objectives:
+### Primary Function Objectives:
 	Last Level Cache Simulation.
 	Compatible with 3 other processors in a shared memory configuration.
 	
-###Cache Details:
+### Cache Details:
 	Capacity	16MB
 	Cache Line Size	64 Bytes
 	Associativity	8-Way
@@ -12,12 +12,12 @@
 	Write Policy	Write-Allocate
 	Coherence Protocol	MESI
 	
-###Next (Higher) Level Cache Details:
+### Next (Higher) Level Cache Details:
 	Cache Line Size	64 Bytes
 	Associativity	4-Way
 	Write Policy	Write-Once (First write is Write-Through, subsequent writes are Write-Back)
 	
-###System Details:
+### System Details:
 	- Maintain Inclusivity.
 	- Not necessary to be synthesizable.
 	- Data doesn't need to be stored.
@@ -25,7 +25,7 @@
 	- No mention of addressable memory sizes.
 		○ Expect trace file to have variable address sizes (this will probably be exploited during Faust's testing).
 	
-###Simulation Details:
+### Simulation Details:
 	- Model communication between LLC and the next higher level cache.
 	- Model bus operations that the LLC performs.
 	- Model snooping results that the LLC reports on the bus in response to snooping of the simulated bus operations of other processors and their caches.
@@ -53,18 +53,18 @@
 					○ Communication messages to higher level caches.
 			
  
-###Coding Suggestions:
+### Coding Suggestions:
 	- Use a separate header file.
 	- Use $value $plusargs to accept dynamic trace file names.
 
-###Demonstration Requirements:
+### Demonstration Requirements:
 	- No debugging information visible during demonstration.
 
-###Testing Requirements:
+### Testing Requirements:
 	- Test plan writeup required.
 	- Each test on the model must be described in the report. 
 
-######**Report Requirements:**
+###### **Report Requirements:**
 	- Describe the interface to the next level cache.
 	- Describe the interface to the shared bus.
 	- Describe the Internal design of cache behavioral model.

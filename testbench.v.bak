@@ -1,6 +1,13 @@
 // ECE 585
 // Final Project
 // Michael Escue
+//
+// Simulation command line code:
+//
+// 		vsim work.testbench +DEBUG_ON +testname=cc1.din
+//
+// cc1.din must be in the same directory as the "work" folder for questa
+//
 
 module testbench();
 

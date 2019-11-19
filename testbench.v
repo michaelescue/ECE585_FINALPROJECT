@@ -6,8 +6,6 @@
 //
 // 		vsim work.testbench +DEBUG_ON +testname=cc1.din
 //
-// cc1.din must be in the same directory as the "work" folder for questa
-//
 
 module testbench();
 
@@ -49,10 +47,10 @@ initial begin
 		scanned = $fscanf(tracefile, "%c %h\n", opcode, address);
        		if(scanned) begin
         		$display("INPUT: opcode = %c address = %h\n", opcode, address);
+                	line_number = line_number +1;
 			end
         	else begin
 			$display("END-OF-INPUT\n");
-                	line_number = line_number +1;
 			end
         	end
         

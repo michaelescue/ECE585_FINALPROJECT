@@ -1,0 +1,54 @@
+N:/msd_project/testbench1.sv {1 {vlog -work work -vopt -sv -stats=none {N:\msd_project\testbench1.sv}
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} N:/msd_project/parser.v {1 {vlog -work work -vopt -stats=none N:/msd_project/parser.v
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module parser
+
+Top level modules:
+	parser
+
+} {} {}} N:/msd_project/parse.sv {1 {vlog -work work -vopt -sv -stats=none N:/msd_project/parse.sv
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} N:/msd_project/fsm.v {0 {vlog -work work -vopt -stats=none {N:\msd_project\fsm.v}
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FSM
+** Error: (vlog-13069) N:\msd_project\fsm.v(13): near "2": syntax error, unexpected INTEGER NUMBER, expecting ';' or ','.
+** Error: N:\msd_project\fsm.v(17): (vlog-2730) Undefined variable: 'ADDRESS_LIMIT'.
+
+} {4.0 6.0} {}} N:/msd_project/address_parser.v {0 {vlog -work work -vopt -stats=none {N:\msd_project\address_parser.v}
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) N:\msd_project\address_parser.v(10): near "#": syntax error, unexpected '#'.
+
+} {3.0 4.0} {}} N:/msd_project/top.v {1 {vlog -work work -vopt -stats=none N:/msd_project/top.v
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} N:/msd_project/LLC.v {0 {vlog -work work -vopt -stats=none {N:\msd_project\LLC.v}
+QuestaSim-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module LLC
+** Error: N:\msd_project\LLC.v(164): (vlog-2730) Undefined variable: 'SENDLINE'.
+** Error: N:\msd_project\LLC.v(172): (vlog-2730) Undefined variable: 'READ'.
+** Error: N:\msd_project\LLC.v(206): (vlog-13091) External reference is incompatible with earlier usages.
+** Error: N:\msd_project\LLC.v(220): (vlog-2730) Undefined variable: 'RWIM'.
+** Error: N:\msd_project\LLC.v(320): (vlog-2730) Undefined variable: 'CLEAR'.
+** Error: N:\msd_project\LLC.v(338): (vlog-2400) Identifier ('string') found where a type or type identifier is required.
+** Error: (vlog-13026) N:\msd_project\LLC.v(346): near "addr": syntax error, 'input', 'output' or 'inout' expected.
+** Error: N:\msd_project\LLC.v(352): (vlog-2400) Identifier ('string') found where a type or type identifier is required.
+** Error: (vlog-13026) N:\msd_project\LLC.v(360): near "addr": syntax error, 'input', 'output' or 'inout' expected.
+** Error: (vlog-13026) N:\msd_project\LLC.v(367): near "addr": syntax error, 'input', 'output' or 'inout' expected.
+** Error: (vlog-13026) N:\msd_project\LLC.v(373): near "addr": syntax error, 'input', 'output' or 'inout' expected.
+
+} {4.0 15.0} {}}

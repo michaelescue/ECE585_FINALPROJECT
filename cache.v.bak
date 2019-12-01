@@ -1,0 +1,34 @@
+
+module cache(set,write_enable,load);
+
+input [14:0]set;
+input write_enable;//use if required
+input load;
+
+output reg valid;
+output reg dirty;
+output reg [11:0]tag;
+
+reg [14:0]way;
+
+always@(*)
+begin
+	if(write_enable)
+	begin	
+		if(load)
+		begin
+			way[set][0];
+			way[set][1];
+			way[set][2]; 
+		end
+	end
+	else
+	begin
+		valid = way[set][0];
+		dirty = way[set][1];
+		tag = way[set][2]; 
+	end
+end
+
+
+endmodule

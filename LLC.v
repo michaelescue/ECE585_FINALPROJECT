@@ -21,6 +21,9 @@
 `define INVALIDATELINE 3 /* Invalidate a line in L1 */
 `define EVICTLINE 4 /* Evict a line from L1 */
 
+// include files
+`include "cache.v"
+
 module LLC #(parameter OPCODE_SIZE = 2,
 	 parameter ADDRESS_LIMIT = 512) 
 	
@@ -163,7 +166,7 @@ begin
 	begin
 		//Hit
 		cache_read = cache_read+1;
-		if(tag == cache_tag) begin 				//how to get this value?
+		if(cache_tag_hit(set) == 1) begin 				//how to get this value? -- Need to change to if(hit)
 			if(valid == 1) begin
 				cache_hit = cache_hit + 1;
 				$display("Exclusive or Shared state");
@@ -371,7 +374,7 @@ begin
 	else if({hitm,hit} == 2)	GetSnoopResult = `HITM;
 	else begin
 		`ifndef SILENT
-		$display("GetSnoopResult - ERROR (or dont care).");
+		$display("GetSnoopResult - ERROR (or dont care).\n");
 		`endif
 	end
 	

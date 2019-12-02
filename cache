@@ -1,0 +1,42 @@
+// Tag comparison
+// Return hit or hitm or nohit
+// Write-back lines
+// Change state
+
+reg set[14:0];
+reg plru[6:0];
+reg valid;
+reg dirty;
+reg tag[10:0];
+reg ByteSel [5:0];
+reg SnoopResult [1:0];
+reg [6:0] cache_plru_bits [14:0];
+reg cache_valid_bits [14:0];
+reg cache_dirty_bits [14:0];
+
+
+
+`define NWAYS 8;
+`define TAG_ARRAY 15;
+`define BITS_PER_NWAYS NWAYS * TAG_ARRAY;
+
+always@(*) begin
+
+// [6:0] PLRU bits array.
+
+// [1:0] State bits array.
+
+// Valid bit array.
+
+// Dirty bit array.
+
+// Tag array.
+reg line = [(`NWAYS*14)
+
+ByteSel = addr[5:0];
+set = addr[20:6];
+tag = addr[31:21];
+
+// Set select
+cache[set][	
+end
